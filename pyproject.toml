@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clasificador-gatos"
+version = "0.1.0"
+description = "Proyecto sencillo para clasificar razas de gatos con Machine Learning"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26.0",
+    "opencv-python>=4.10.0.84",
+    "scikit-learn>=1.5.0",
+    "streamlit>=1.45.0",
+]
+
+[project.scripts]
+gatos = "main:main"
+
+[tool.setuptools]
+py-modules = ["main"]
+
+[tool.setuptools.packages.find]
+include = ["src*"]
+
+[tool.uv]
+package = true
